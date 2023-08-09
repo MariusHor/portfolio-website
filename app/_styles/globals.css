@@ -2,14 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-bg: #000000;
+  --color-text-primary: #ffffff;
+  --color-text-pale: #d1d5db;
+  --color-accent-primary: #15803d;
+  --color-accent-hover: #22c55e;
+}
+
+@layer utilities {
+  .transition-primary {
+    @apply transition ease-in-out duration-300;
+  }
+
+  .transition-secondary {
+    @apply transition ease-in-out duration-500;
+  }
+
+  .col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .row-center {
+    @apply flex justify-center items-center;
+  }
+
+  .heading-md {
+    @apply font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  .heading-xl {
+    @apply font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl;
+  }
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  color: white;
-  background-color: black;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
   min-height: 100vh;
   height: 100%;
 }

@@ -10,6 +10,13 @@
   --color-accent-hover: #22c55e;
 }
 
+@layer components {
+  .logo {
+    @apply text-3xl font-extrabold relative hover:before:opacity-0;
+    @apply before:transition-secondary before:absolute before:bg-green-700 before:h-6 before:blur-[2px] before:w-10 before:rounded-md before:bottom-0 before:-z-10;
+  }
+}
+
 @layer utilities {
   .transition-primary {
     @apply transition ease-in-out duration-300;
@@ -44,6 +51,6 @@ body {
 body {
   color: var(--color-text-primary);
   background-color: var(--color-bg);
-  min-height: 100vh;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 }

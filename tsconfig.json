@@ -23,6 +23,7 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./_components/*"],
+      "@/lib/*": ["./_lib/*"],
       "@/styles/*": ["./_styles/*"],
       "@/utils/*": ["./_utils/*"],
       "@/providers/*": ["./_providers/*"]

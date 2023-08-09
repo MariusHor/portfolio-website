@@ -1,19 +1,27 @@
 import '@/styles/globals.css';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import config from '@/lib/config';
+import { Roboto } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
-  title: 'Marius Horghidan',
-  description: 'Marius Horghidan - Frontend Developer',
+  title: config.siteTitle,
+  description: config.siteDescription,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>
+        <header></header>
+        <main className="h-full">{children}</main>
+        <footer></footer>
+      </body>
     </html>
   );
 }

@@ -16,6 +16,9 @@ const config: Config = {
         primary: 'var(--color-text-primary)',
         'primary-pale': 'var(--color-text-pale)',
       },
+      borderColor: {
+        accent: 'var(--color-accent-primary)',
+      },
     },
   },
   plugins: [],

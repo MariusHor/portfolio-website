@@ -5,6 +5,7 @@ import { Roboto } from 'next/font/google';
 
 import config from '@/lib/config';
 import Logo from '@/components/Logo';
+import AnimatedCursorWrapper from './_components/AnimatedCursorWrapper';
 
 const roboto = Roboto({
   weight: '400',
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </header>
         <main className="h-full">{children}</main>
         <footer></footer>
+        <AnimatedCursorWrapper />
       </body>
     </html>
   );

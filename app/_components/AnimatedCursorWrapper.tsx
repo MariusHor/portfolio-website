@@ -11,7 +11,7 @@ export default function AnimatedCursorWrapper() {
       innerSize={40}
       outerSize={80}
       innerScale={1}
-      outerScale={2}
+      outerScale={1.5}
       outerAlpha={1}
       showSystemCursor={true}
       innerStyle={{

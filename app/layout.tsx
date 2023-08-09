@@ -5,7 +5,8 @@ import { Roboto } from 'next/font/google';
 
 import config from '@/lib/config';
 import Logo from '@/components/Logo';
-import AnimatedCursorWrapper from './_components/AnimatedCursorWrapper';
+import AnimatedCursorWrapper from '@/components/AnimatedCursorWrapper';
+import DownloadResumeButton from '@/components/DownloadResumeButton';
 
 const roboto = Roboto({
   weight: '400',
@@ -21,11 +22,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <header className="col-center">
+        <header className="col-center py-8">
           <Logo />
         </header>
         <main className="h-full">{children}</main>
-        <footer></footer>
+        <footer className="col-center py-8">
+          <DownloadResumeButton />
+        </footer>
         <AnimatedCursorWrapper />
       </body>
     </html>

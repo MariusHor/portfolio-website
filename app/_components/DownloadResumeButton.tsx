@@ -1,8 +1,14 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
 export default function DownloadResumeButton() {
   return (
-    <a
+    <motion.a
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: 'easeOut', duration: 0.5 }}
       href="/marius-horghidan-frontend-developer-resume-en.pdf"
       download="marius-horghidan-frontend-developer-resume-en"
       target="_blank"
@@ -11,6 +17,6 @@ export default function DownloadResumeButton() {
     >
       CV
       <CloudDownloadIcon />
-    </a>
+    </motion.a>
   );
 }

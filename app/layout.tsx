@@ -4,11 +4,11 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
 import config from '@/lib/config';
-import Logo from '@/components/Logo';
 import AnimatedCursorWrapper from '@/components/AnimatedCursorWrapper';
 import DownloadResumeButton from '@/components/DownloadResumeButton';
+import Logo from '@/components/Logo';
 
-const roboto = Montserrat({
+const montserrat = Montserrat({
   weight: ['400', '600', '800'],
   subsets: ['latin'],
 });
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={montserrat.className}>
         <header className="col-center py-8">
           <Logo />
         </header>

@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
@@ -34,14 +36,63 @@ const socials = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      type: 'spring',
+      stiffness: 125,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, scale: 2 },
+  show: { opacity: 1, scale: 1 },
+};
+
 export default function SocialsBar() {
+  const [hoveredItem, setHoveredItem] = useState<null | string>(null);
+
   return (
-    <ul className="row-center flex-wrap max-w-sm">
-      {socials.map(social => (
-        <SocialTile href={social.href} title={social.title} key={social.id}>
-          {social.icon}
-        </SocialTile>
-      ))}
-    </ul>
+    <div className="col-center gap-2 relative">
+      <motion.ul
+        className="row-center flex-wrap max-w-sm"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
+        {socials.map(social => (
+          <motion.li key={social.id} variants={item}>
+            <SocialTile
+              href={social.href}
+              title={social.title}
+              onHover={content => setHoveredItem(content)}
+            >
+              {social.icon}
+            </SocialTile>
+          </motion.li>
+        ))}
+      </motion.ul>
+      <AnimatePresence>
+        {hoveredItem && (
+          <motion.span
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 50, opacity: 0 }}
+            transition={{
+              type: 'spring',
+              stiffness: 120,
+              ease: [0.17, 0.67, 0.83, 0.67],
+            }}
+            className="absolute -bottom-20 heading-md--extrabold"
+          >
+            {hoveredItem}
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

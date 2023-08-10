@@ -1,15 +1,15 @@
 import '@/styles/globals.css';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
 import config from '@/lib/config';
 import Logo from '@/components/Logo';
 import AnimatedCursorWrapper from '@/components/AnimatedCursorWrapper';
 import DownloadResumeButton from '@/components/DownloadResumeButton';
 
-const roboto = Roboto({
-  weight: '400',
+const roboto = Montserrat({
+  weight: ['400', '600', '800'],
   subsets: ['latin'],
 });
 

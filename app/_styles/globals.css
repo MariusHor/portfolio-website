@@ -32,15 +32,15 @@
   }
 
   .row-center {
-    @apply flex justify-center items-center;
+    @apply flex flex-row justify-center items-center;
   }
 
   .heading-md {
-    @apply font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+    @apply font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl;
   }
 
   .heading-xl {
-    @apply font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl;
+    @apply font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl;
   }
 }
 
@@ -51,6 +51,7 @@ body {
 
 body {
   color: var(--color-text-primary);
+  font-weight: 400;
   background-color: var(--color-bg);
   display: flex;
   flex-direction: column;

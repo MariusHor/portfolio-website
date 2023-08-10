@@ -26,7 +26,6 @@ export default function AnimatedCursorWrapper() {
         border: '3px solid var(--color-accent-secondary)',
         backgroundColor: 'var(--color-accent-secondary)',
         opacity: '0.1',
-        mixBlendMode: 'exclusion',
       }}
     />
   );

@@ -29,14 +29,14 @@ const socials = [
   {
     id: 3,
     title: 'Twitter',
-    href: 'https://www.linkedin.com/in/marius-horghidan/',
+    href: 'https://twitter.com/marius_hor',
     icon: <TwitterIcon sx={{ fontSize: '64px' }} />,
   },
 ];
 
 export default function SocialsBar() {
   return (
-    <ul className="row-center flex-wrap">
+    <ul className="row-center flex-wrap max-w-sm">
       {socials.map(social => (
         <SocialTile href={social.href} title={social.title} key={social.id}>
           {social.icon}

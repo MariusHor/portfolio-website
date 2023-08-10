@@ -7,9 +7,9 @@ export default function DownloadResumeButton() {
       download="marius-horghidan-frontend-developer-resume-en"
       target="_blank"
       rel="noreferrer"
-      className="p-4 bg-accent hover:bg-accent-hover rounded-md transition-primary row-center gap-4"
+      className="p-4 border border-accent hover:bg-accent-hover rounded-md transition-primary row-center gap-2 shadow-md shadow-gray-700"
     >
-      Resume
+      CV
       <CloudDownloadIcon />
     </a>
   );

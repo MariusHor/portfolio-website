@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <header className="col-center py-8">
           <Logo />
         </header>
-        <main className="h-full">{children}</main>
+        <main className="grow col-center">{children}</main>
         <footer className="col-center py-8">
           <DownloadResumeButton />
         </footer>

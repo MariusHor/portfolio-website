@@ -13,7 +13,7 @@ export default function HeroHeadings() {
           stiffness: 75,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
-        className="heading-xl select-none"
+        className="heading-xl select-none text-center lg:text-left sm:mb-4 lg:mb-0"
       >
         Marius Horghidan
       </motion.h1>
@@ -26,7 +26,7 @@ export default function HeroHeadings() {
           delay: 0.2,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
-        className="heading-md text-primary-pale flex items-end gap-2 select-none"
+        className="heading-md text-primary-pale flex justify-center lg:justify-start items-end gap-2 select-none"
       >
         The Hub<span className="bg-accent rounded-full block w-4 h-4 blur-sm mb-1"></span>
       </motion.h2>

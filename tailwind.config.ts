@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundColor: {
+        primary: 'var(--color-bg)',
         accent: 'var(--color-accent-primary)',
         'accent-hover': 'var(--color-accent-hover)',
       },
@@ -17,6 +18,7 @@ const config: Config = {
         'primary-pale': 'var(--color-text-pale)',
       },
       borderColor: {
+        primary: 'var(--color-border-primary)',
         accent: 'var(--color-accent-primary)',
       },
     },

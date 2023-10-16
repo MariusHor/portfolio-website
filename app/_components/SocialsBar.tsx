@@ -14,18 +14,21 @@ const socials = [
     title: 'LinkedIn',
     href: 'https://www.linkedin.com/in/marius-horghidan/',
     icon: <LinkedInIcon sx={{ fontSize: '64px' }} />,
+    ariaLabel: 'Visit LinkedIn profile',
   },
   {
     id: 1,
     title: 'Mail',
     href: 'mailto:marius.horghidan@yahoo.com',
     icon: <EmailIcon sx={{ fontSize: '64px' }} />,
+    ariaLabel: 'Send an email',
   },
   {
     id: 2,
     title: 'GitHub',
     href: 'https://github.com/MariusHor',
     icon: <GitHubIcon sx={{ fontSize: '64px' }} />,
+    ariaLabel: 'Visit GitHub profile',
   },
 
   {
@@ -33,6 +36,7 @@ const socials = [
     title: 'Twitter',
     href: 'https://twitter.com/marius_hor',
     icon: <TwitterIcon sx={{ fontSize: '64px' }} />,
+    ariaLabel: 'Visit Twitter profile',
   },
 ];
 
@@ -67,6 +71,7 @@ export default function SocialsBar() {
         {socials.map(social => (
           <motion.li key={social.id} variants={item}>
             <SocialTile
+              ariaLabel={social.ariaLabel}
               href={social.href}
               title={social.title}
               onHover={content => setHoveredItem(content)}

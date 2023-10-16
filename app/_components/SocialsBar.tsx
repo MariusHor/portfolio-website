@@ -60,6 +60,8 @@ const item = {
 export default function SocialsBar() {
   const [hoveredItem, setHoveredItem] = useState<null | string>(null);
 
+  console.log(hoveredItem);
+
   return (
     <div className="col-center gap-2 relative">
       <motion.ul
@@ -84,15 +86,15 @@ export default function SocialsBar() {
       <AnimatePresence>
         {hoveredItem && (
           <motion.span
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 50, opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{
               type: 'spring',
-              stiffness: 120,
+              stiffness: 100,
               ease: [0.17, 0.67, 0.83, 0.67],
             }}
-            className="absolute -bottom-20 heading-md--extrabold"
+            className="absolute -bottom-10 sm:-bottom-20 heading-md--extrabold"
           >
             {hoveredItem}
           </motion.span>
